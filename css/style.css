@@ -45,6 +45,7 @@ nav{
 
 .gallery-item{
     outline:5px solid red;
+    min-height:200px;
 }
 
 .gallery-item img{
