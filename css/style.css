@@ -223,4 +223,8 @@ nav{
         height:85vh;
     }
 
+    
+img{
+    border:5px solid red !important;
 }
+
