@@ -44,11 +44,7 @@ nav{
 }
 
 .gallery-item{
-    position:relative;
-    width:100%;
-    aspect-ratio:1 / 1;
-    overflow:hidden;
-    cursor:pointer;
+    outline:5px solid red;
 }
 
 .gallery-item img{
