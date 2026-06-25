@@ -44,8 +44,10 @@ nav{
 }
 
 .gallery-item{
-    outline:5px solid red;
-    min-height:200px;
+    position:relative;
+    width:100%;
+    padding-top:100%;
+    overflow:hidden;
 }
 
 .gallery-item img{
@@ -54,8 +56,6 @@ nav{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
-    z-index:1;
 }
 
 .overlay{
