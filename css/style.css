@@ -27,7 +27,6 @@ a{
     justify-content:space-between;
     align-items:center;
     padding:40px;
-
     font-family:'ISOCP', Arial, Helvetica, sans-serif;
 }
 
@@ -46,11 +45,11 @@ nav a{
     font-size:1.8rem;
     font-weight:400;
     letter-spacing:0.02em;
-    transition:opacity 0.2s ease;
+    transition:opacity .25s ease;
 }
 
 nav a:hover{
-    opacity:0.6;
+    opacity:.6;
 }
 
 .gallery{
@@ -62,7 +61,7 @@ nav a:hover{
 
 .gallery-item{
     position:relative;
-    aspect-ratio:1 / 1;
+    aspect-ratio:1/1;
     overflow:hidden;
     cursor:pointer;
 }
@@ -72,6 +71,11 @@ nav a:hover{
     height:100%;
     object-fit:cover;
     display:block;
+    transition:transform .45s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.03);
 }
 
 .overlay{
@@ -79,8 +83,9 @@ nav a:hover{
     inset:0;
     display:flex;
     align-items:flex-end;
+    padding:28px;
     opacity:0;
-    transition:opacity 0.3s ease;
+    transition:opacity .35s ease;
     background:transparent;
 }
 
@@ -89,11 +94,12 @@ nav a:hover{
 }
 
 .overlay h2{
-    width:100%;
-    padding:20px;
-    background:white;
-    font-size:1rem;
+    color:white;
+    font-size:1.2rem;
     font-weight:400;
+    background:none;
+    padding:0;
+    text-shadow:0 2px 10px rgba(0,0,0,.45);
 }
 
 #lightbox-overlay{
@@ -102,29 +108,22 @@ nav a:hover{
     display:none;
     justify-content:center;
     align-items:center;
-
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
-
-    background:rgba(255,255,255,0.15);
-
+    background:rgba(255,255,255,.15);
     z-index:1000;
 }
 
 #lightbox{
     width:80vw;
     height:80vh;
-
     background:white;
     border-radius:12px;
     padding:30px;
-
     display:flex;
     flex-direction:column;
     gap:20px;
-
     box-shadow:0 20px 60px rgba(0,0,0,.12);
-
     position:relative;
 }
 
@@ -140,11 +139,9 @@ nav a:hover{
 
 #project-link{
     width:fit-content;
-
     border:1px solid black;
     padding:12px 20px;
-
-    transition:0.3s;
+    transition:.3s;
 }
 
 #project-link:hover{
@@ -156,12 +153,9 @@ nav a:hover{
     position:absolute;
     top:15px;
     right:15px;
-
     border:none;
     background:none;
-
     cursor:pointer;
-
     font-size:2rem;
 }
 
