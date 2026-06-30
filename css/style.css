@@ -271,6 +271,7 @@ nav a:hover{
 
 
 
+
 /* CLOSE BUTTON */
 
 
@@ -280,22 +281,22 @@ nav a:hover{
     position:absolute;
 
 
-    top:0;
+    top:-3px;
 
 
-    right:0;
+    right:-3px;
 
 
-    width:42px;
+    width:32px;
 
 
-    height:42px;
+    height:32px;
 
 
     border:none;
 
 
-    background:white;
+    background:transparent;
 
 
     cursor:pointer;
@@ -319,20 +320,17 @@ nav a:hover{
     z-index:20;
 
 
+    color:black;
+
 }
-
-
-
-
 
 
 
 #close-btn:hover{
 
-    background:#f2f2f2;
+    opacity:.5;
 
 }
-
 
 
 
