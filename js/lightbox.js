@@ -1,18 +1,31 @@
 const items = document.querySelectorAll(".gallery-item");
 
+
 const overlay = document.getElementById("lightbox-overlay");
+
 
 const image = document.getElementById("lightbox-image");
 
 const secondImage = document.getElementById("second-image");
 
+
 const title = document.getElementById("lightbox-title");
 
 const description = document.getElementById("project-description");
 
+
+const material = document.getElementById("project-material");
+
+const year = document.getElementById("project-year");
+
+const dimensions = document.getElementById("project-dimensions");
+
+
 const link = document.getElementById("project-link");
 
+
 const closeBtn = document.getElementById("close-btn");
+
 
 
 
@@ -40,7 +53,18 @@ items.forEach(item => {
 
 
 
+        material.textContent = item.dataset.material;
+
+
+        year.textContent = item.dataset.year;
+
+
+        dimensions.textContent = item.dataset.dimensions;
+
+
+
         link.href = item.dataset.link;
+
 
 
 
@@ -49,6 +73,7 @@ items.forEach(item => {
 
 
         document.body.style.overflow = "hidden";
+
 
 
     });
@@ -78,16 +103,18 @@ function closeLightbox(){
 
 
 
-
-closeBtn.addEventListener("click", closeLightbox);
-
-
-
-
+closeBtn.addEventListener(
+"click",
+closeLightbox
+);
 
 
 
-overlay.addEventListener("click", (e) => {
+
+
+
+
+overlay.addEventListener("click",(e)=>{
 
 
     if(e.target === overlay){
@@ -107,7 +134,7 @@ overlay.addEventListener("click", (e) => {
 
 
 
-document.addEventListener("keydown", (e)=>{
+document.addEventListener("keydown",(e)=>{
 
 
     if(e.key === "Escape"){
