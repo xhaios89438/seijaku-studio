@@ -26,41 +26,65 @@ a{
 }
 
 
+
 /* HEADER */
 
+
 .site-header{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     padding:40px;
+
     font-family:'ISOCP', Arial, Helvetica, sans-serif;
+
 }
 
 
 .logo{
+
     font-size:3rem;
+
     font-weight:normal;
+
 }
 
 
 nav{
+
     display:flex;
+
     gap:40px;
+
     align-items:center;
+
 }
 
 
 nav a{
+
     font-size:1.8rem;
+
     font-weight:400;
+
     letter-spacing:.02em;
+
     transition:opacity .25s ease;
+
 }
 
 
 nav a:hover{
+
     opacity:.6;
+
 }
+
+
 
 
 
@@ -69,55 +93,94 @@ nav a:hover{
 
 
 .gallery{
+
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:8px;
+
     padding:0 8px 8px;
+
 }
+
 
 
 .gallery-item{
+
     position:relative;
+
     aspect-ratio:1/1;
+
     overflow:hidden;
+
     cursor:pointer;
+
 }
+
 
 
 .gallery-item img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
+
     display:block;
+
     transition:transform .45s ease;
+
 }
+
 
 
 .gallery-item:hover img{
+
     transform:scale(1.03);
+
 }
+
+
 
 
 .overlay{
+
     position:absolute;
+
     inset:0;
+
     display:flex;
+
     align-items:flex-end;
+
     padding:28px;
+
     opacity:0;
+
     transition:opacity .35s ease;
+
 }
+
 
 
 .gallery-item:hover .overlay{
+
     opacity:1;
+
 }
 
 
+
 .overlay h2{
+
     color:#555;
+
     font-size:1.2rem;
+
     font-weight:400;
+
 }
 
 
@@ -133,27 +196,46 @@ nav a:hover{
 
     position:fixed;
 
-    inset:0;
+    top:120px;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
 
     display:none;
 
+
     overflow-y:auto;
 
-    background:rgba(255,255,255,.96);
+
+    background:rgba(255,255,255,.15);
+
 
     backdrop-filter:blur(12px);
 
     -webkit-backdrop-filter:blur(12px);
 
+
     z-index:1000;
+
+
+    padding:20px;
 
 }
 
 
 
 #lightbox-overlay.active{
+
     display:block;
+
 }
+
+
+
 
 
 
@@ -163,15 +245,27 @@ nav a:hover{
 
     width:min(1200px,90vw);
 
-    min-height:90vh;
 
-    margin:40px auto;
+    min-height:calc(100vh - 170px);
+
+
+    margin:0 auto 40px;
+
 
     background:white;
 
-    padding:40px;
+
+    border:8px solid white;
+
+
+    padding:30px;
+
 
     position:relative;
+
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
 
 }
 
@@ -179,27 +273,34 @@ nav a:hover{
 
 
 
-
-/* CLOSE */
 
 
 #close-btn{
 
-    position:fixed;
 
-    top:25px;
+    position:absolute;
 
-    right:35px;
+
+    top:15px;
+
+
+    right:15px;
+
 
     border:none;
 
+
     background:none;
+
 
     cursor:pointer;
 
+
     font-size:2rem;
 
+
     z-index:10;
+
 
 }
 
@@ -208,20 +309,28 @@ nav a:hover{
 
 
 
-/* HERO IMAGE */
+
+
+/* LARGE IMAGE */
 
 
 #lightbox-image{
 
+
     width:100%;
+
 
     height:70vh;
 
+
     object-fit:cover;
+
 
     display:block;
 
+
     margin-bottom:50px;
+
 
 }
 
@@ -231,23 +340,25 @@ nav a:hover{
 
 
 
-/* LOWER SECTION */
+/* PROJECT INFO */
 
 
 .lightbox-details{
 
+
     display:grid;
+
 
     grid-template-columns:1fr 1fr;
 
+
     gap:60px;
+
 
     align-items:start;
 
+
 }
-
-
-
 
 
 
@@ -256,13 +367,18 @@ nav a:hover{
 
     width:100%;
 
+
     aspect-ratio:1/1;
+
 
     object-fit:cover;
 
+
     display:block;
 
+
 }
+
 
 
 
@@ -274,13 +390,20 @@ nav a:hover{
 
     font-family:'ISOCP', Arial, sans-serif;
 
+
     font-size:3rem;
+
 
     font-weight:400;
 
+
     margin-bottom:30px;
 
+
 }
+
+
+
 
 
 
@@ -289,9 +412,12 @@ nav a:hover{
 
     max-width:450px;
 
+
     line-height:1.7;
 
+
     margin-bottom:40px;
+
 
 }
 
@@ -302,11 +428,15 @@ nav a:hover{
 
 .details p{
 
+
     margin-bottom:25px;
+
 
     line-height:1.5;
 
+
 }
+
 
 
 
@@ -321,9 +451,12 @@ nav a:hover{
 
     display:flex;
 
+
     gap:40px;
 
+
     margin-top:70px;
+
 
 }
 
@@ -334,20 +467,25 @@ nav a:hover{
 
     border:1px solid black;
 
+
     padding:12px 20px;
+
 
     transition:.3s;
 
-}
 
+}
 
 
 
 .lightbox-links a:hover{
 
+
     background:black;
 
+
     color:white;
+
 
 }
 
@@ -357,82 +495,128 @@ nav a:hover{
 
 
 
-/* PROJECT PAGES */
+
+/* ABOUT + PROJECT PAGES */
 
 
 .about-page{
 
+
     max-width:800px;
+
 
     margin:120px auto;
 
+
     padding:40px;
 
+
 }
+
 
 
 .about-page h1{
 
+
     margin-bottom:30px;
 
+
 }
+
+
+
+
 
 
 
 .project-page{
 
+
     max-width:1200px;
+
 
     margin:auto;
 
+
     padding:40px;
 
+
 }
+
+
+
+
 
 
 .hero-image{
 
+
     width:100%;
+
 
     margin-bottom:50px;
 
+
 }
+
 
 
 .hero-image img{
 
+
     width:100%;
+
 
     display:block;
 
+
 }
+
+
+
 
 
 
 .project-content{
 
+
     display:flex;
+
 
     flex-direction:column;
 
+
     gap:20px;
 
+
 }
+
+
+
 
 
 
 .contact-box{
 
+
     margin-top:40px;
 
+
 }
+
+
+
+
 
 
 .back-link{
 
+
     margin-top:50px;
 
+
     display:inline-block;
+
 
 }
 
@@ -442,7 +626,8 @@ nav a:hover{
 
 
 
-/* RESPONSIVE */
+
+/* MOBILE */
 
 
 @media(max-width:900px){
@@ -450,21 +635,31 @@ nav a:hover{
 
     .gallery{
 
+
         grid-template-columns:repeat(2,1fr);
+
 
     }
 
 
+
     .lightbox-details{
+
 
         grid-template-columns:1fr;
 
+
         gap:30px;
+
 
     }
 
 
 }
+
+
+
+
 
 
 
@@ -473,55 +668,826 @@ nav a:hover{
 
     .site-header{
 
+
         flex-direction:column;
+
 
         gap:20px;
 
+
         align-items:flex-start;
 
+
     }
+
 
 
 
     .gallery{
 
+
         grid-template-columns:1fr;
 
+
     }
+
 
 
 
     #lightbox{
 
+
         width:94vw;
+
 
         padding:20px;
 
+
     }
+
+
 
 
 
     #lightbox-image{
 
+
         height:50vh;
 
+
     }
+
+
 
 
 
     .project-info h2{
 
+
         font-size:2rem;
+
 
     }
 
 
 
+
+
     .lightbox-links{
+
 
         flex-direction:column;
 
+
         gap:15px;
+
+
+    }
+
+
+}@font-face {
+    font-family: 'ISOCP';
+    src: url('../fonts/ISOCP-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background:white;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+
+/* HEADER */
+
+
+.site-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:40px;
+
+    font-family:'ISOCP', Arial, Helvetica, sans-serif;
+
+}
+
+
+.logo{
+
+    font-size:3rem;
+
+    font-weight:normal;
+
+}
+
+
+nav{
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+
+nav a{
+
+    font-size:1.8rem;
+
+    font-weight:400;
+
+    letter-spacing:.02em;
+
+    transition:opacity .25s ease;
+
+}
+
+
+nav a:hover{
+
+    opacity:.6;
+
+}
+
+
+
+
+
+
+/* GALLERY */
+
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:8px;
+
+    padding:0 8px 8px;
+
+}
+
+
+
+.gallery-item{
+
+    position:relative;
+
+    aspect-ratio:1/1;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+
+
+.gallery-item img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:transform .45s ease;
+
+}
+
+
+
+.gallery-item:hover img{
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:28px;
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+}
+
+
+
+.gallery-item:hover .overlay{
+
+    opacity:1;
+
+}
+
+
+
+.overlay h2{
+
+    color:#555;
+
+    font-size:1.2rem;
+
+    font-weight:400;
+
+}
+
+
+
+
+
+
+
+/* LIGHTBOX */
+
+
+#lightbox-overlay{
+
+    position:fixed;
+
+    top:120px;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+
+    display:none;
+
+
+    overflow-y:auto;
+
+
+    background:rgba(255,255,255,.15);
+
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+
+    z-index:1000;
+
+
+    padding:20px;
+
+}
+
+
+
+#lightbox-overlay.active{
+
+    display:block;
+
+}
+
+
+
+
+
+
+
+#lightbox{
+
+
+    width:min(1200px,90vw);
+
+
+    min-height:calc(100vh - 170px);
+
+
+    margin:0 auto 40px;
+
+
+    background:white;
+
+
+    border:8px solid white;
+
+
+    padding:30px;
+
+
+    position:relative;
+
+
+    box-shadow:0 20px 60px rgba(0,0,0,.12);
+
+
+}
+
+
+
+
+
+
+
+#close-btn{
+
+
+    position:absolute;
+
+
+    top:15px;
+
+
+    right:15px;
+
+
+    border:none;
+
+
+    background:none;
+
+
+    cursor:pointer;
+
+
+    font-size:2rem;
+
+
+    z-index:10;
+
+
+}
+
+
+
+
+
+
+
+
+/* LARGE IMAGE */
+
+
+#lightbox-image{
+
+
+    width:100%;
+
+
+    height:70vh;
+
+
+    object-fit:cover;
+
+
+    display:block;
+
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+
+
+
+
+/* PROJECT INFO */
+
+
+.lightbox-details{
+
+
+    display:grid;
+
+
+    grid-template-columns:1fr 1fr;
+
+
+    gap:60px;
+
+
+    align-items:start;
+
+
+}
+
+
+
+.second-image img{
+
+
+    width:100%;
+
+
+    aspect-ratio:1/1;
+
+
+    object-fit:cover;
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+
+
+.project-info h2{
+
+
+    font-family:'ISOCP', Arial, sans-serif;
+
+
+    font-size:3rem;
+
+
+    font-weight:400;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+#project-description{
+
+
+    max-width:450px;
+
+
+    line-height:1.7;
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+
+
+
+.details p{
+
+
+    margin-bottom:25px;
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+/* LINKS */
+
+
+.lightbox-links{
+
+
+    display:flex;
+
+
+    gap:40px;
+
+
+    margin-top:70px;
+
+
+}
+
+
+
+.lightbox-links a{
+
+
+    border:1px solid black;
+
+
+    padding:12px 20px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.lightbox-links a:hover{
+
+
+    background:black;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+/* ABOUT + PROJECT PAGES */
+
+
+.about-page{
+
+
+    max-width:800px;
+
+
+    margin:120px auto;
+
+
+    padding:40px;
+
+
+}
+
+
+
+.about-page h1{
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+.project-page{
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    padding:40px;
+
+
+}
+
+
+
+
+
+
+.hero-image{
+
+
+    width:100%;
+
+
+    margin-bottom:50px;
+
+
+}
+
+
+
+.hero-image img{
+
+
+    width:100%;
+
+
+    display:block;
+
+
+}
+
+
+
+
+
+
+.project-content{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+
+.contact-box{
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+
+
+
+.back-link{
+
+
+    margin-top:50px;
+
+
+    display:inline-block;
+
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:900px){
+
+
+    .gallery{
+
+
+        grid-template-columns:repeat(2,1fr);
+
+
+    }
+
+
+
+    .lightbox-details{
+
+
+        grid-template-columns:1fr;
+
+
+        gap:30px;
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+    .site-header{
+
+
+        flex-direction:column;
+
+
+        gap:20px;
+
+
+        align-items:flex-start;
+
+
+    }
+
+
+
+
+    .gallery{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+    #lightbox{
+
+
+        width:94vw;
+
+
+        padding:20px;
+
+
+    }
+
+
+
+
+
+    #lightbox-image{
+
+
+        height:50vh;
+
+
+    }
+
+
+
+
+
+    .project-info h2{
+
+
+        font-size:2rem;
+
+
+    }
+
+
+
+
+
+    .lightbox-links{
+
+
+        flex-direction:column;
+
+
+        gap:15px;
+
 
     }
 
