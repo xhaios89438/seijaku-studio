@@ -89,6 +89,7 @@ nav a:hover{
 
 
 
+
 /* GALLERY */
 
 
@@ -105,6 +106,7 @@ nav a:hover{
 }
 
 
+
 .gallery-item{
 
     position:relative;
@@ -116,6 +118,7 @@ nav a:hover{
     cursor:pointer;
 
 }
+
 
 
 .gallery-item img{
@@ -133,11 +136,13 @@ nav a:hover{
 }
 
 
+
 .gallery-item:hover img{
 
     transform:scale(1.03);
 
 }
+
 
 
 
@@ -320,7 +325,7 @@ nav a:hover{
     z-index:20;
 
 
-    color:black;
+    color:#777;
 
 }
 
@@ -328,7 +333,7 @@ nav a:hover{
 
 #close-btn:hover{
 
-    opacity:.5;
+    color:#333;
 
 }
 
