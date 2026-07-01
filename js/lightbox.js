@@ -6,40 +6,50 @@ const projects = {
 
         title: "Modular A",
 
+
         description:
         "A modular furniture system exploring flexibility and minimal form.",
+
 
         material:
         "Oak / Steel",
 
+
         year:
         "2026",
 
+
         dimensions:
         "1200 × 600 × 450mm",
+
 
         link:
         "projects/design-01.html",
 
 
 
-        media: [
+        hero:
+        "images/modular-a/hero.webp",
+
+
+
+        media:[
 
             {
                 type:"image",
-                src:"images/design-01.webp",
-                hero:true
+                src:"images/modular-a/detail-01.webp"
             },
 
 
             {
                 type:"image",
-                src:"images/design-01-2.webp"
+                src:"images/modular-a/detail-02.webp"
             }
 
         ]
 
     },
+
 
 
 
@@ -51,22 +61,39 @@ const projects = {
     "chair-b": {
 
 
+
         title:"b Chair",
+
+
 
         description:
         "A chair design focused on simplicity, comfort and structure.",
 
+
+
         material:
         "Ash Wood / Fabric",
+
+
 
         year:
         "2026",
 
+
+
         dimensions:
         "700 × 650 × 800mm",
 
+
+
         link:
         "projects/design-02.html",
+
+
+
+        hero:
+        "images/chair-b/hero.webp",
+
 
 
 
@@ -75,14 +102,13 @@ const projects = {
 
             {
                 type:"image",
-                src:"images/design-02.webp",
-                hero:true
+                src:"images/chair-b/detail-01.webp"
             },
 
 
             {
                 type:"image",
-                src:"images/design-02-2.webp"
+                src:"images/chair-b/detail-02.webp"
             }
 
 
@@ -97,48 +123,70 @@ const projects = {
 
 
 
+
     "table-c": {
+
 
 
         title:"Table C",
 
+
+
         description:
         "A contemporary table exploring balance between material and proportion.",
+
+
 
         material:
         "Walnut / Aluminium",
 
+
+
         year:
         "2026",
 
+
+
         dimensions:
         "1600 × 800 × 740mm",
+
+
 
         link:
         "projects/design-03.html",
 
 
 
+        hero:
+        "images/table-c/hero.webp",
+
+
+
+
+
         media:[
 
-
-            {
-                type:"image",
-                src:"images/design-03.webp",
-                hero:true
-            },
 
 
             {
                 type:"video",
-                src:"videos/coffee-table.mp4"
+                src:"videos/table-c/animation.mp4"
             },
+
 
 
             {
                 type:"image",
-                src:"images/design-03-2.webp"
+                src:"images/table-c/detail-01.webp"
+            },
+
+
+
+            {
+                type:"image",
+                src:"images/table-c/detail-02.webp"
             }
+
 
 
         ]
@@ -146,7 +194,9 @@ const projects = {
     }
 
 
+
 };
+
 
 
 
@@ -236,6 +286,7 @@ items.forEach(item => {
     });
 
 
+
 });
 
 
@@ -246,8 +297,8 @@ items.forEach(item => {
 
 
 
-
 function openProject(id){
+
 
 
     const project =
@@ -282,49 +333,56 @@ function openProject(id){
 
 
 
+
+
+    // HERO IMAGE
+
+
+    image.src =
+    project.hero;
+
+
+
+    image.style.display =
+    "block";
+
+
+
+
+
+
+
+
+
+    // EXTRA MEDIA
+
+
     project.media.forEach(media=>{
 
 
 
 
 
-        if(media.hero){
+        if(media.type==="image"){
 
 
 
-            if(media.type==="image"){
-
-
-                image.src =
-                media.src;
-
-
-                image.style.display =
-                "block";
-
-
-            }
+            const img =
+            document.createElement("img");
 
 
 
+            img.src =
+            media.src;
 
 
-            if(media.type==="video"){
+
+            img.className =
+            "project-image";
 
 
-                video.src =
-                media.src;
 
-
-                video.style.display =
-                "block";
-
-
-                video.play();
-
-
-            }
-
+            mediaContainer.appendChild(img);
 
 
         }
@@ -335,76 +393,45 @@ function openProject(id){
 
 
 
-        else {
+
+
+        if(media.type==="video"){
 
 
 
-            if(media.type==="image"){
+            const vid =
+            document.createElement("video");
 
 
 
-                const img =
-                document.createElement("img");
+            vid.src =
+            media.src;
 
 
 
-                img.src =
-                media.src;
+            vid.className =
+            "project-video";
 
 
 
-                img.className =
-                "project-image";
+            vid.autoplay = true;
+
+
+            vid.loop = true;
+
+
+            vid.muted = true;
+
+
+            vid.playsInline = true;
 
 
 
-                mediaContainer.appendChild(img);
-
-
-            }
-
-
-
-
-
-
-
-            if(media.type==="video"){
-
-
-
-                const vid =
-                document.createElement("video");
-
-
-
-                vid.src =
-                media.src;
-
-
-
-                vid.className =
-                "project-video";
-
-
-
-                vid.autoplay = true;
-
-                vid.loop = true;
-
-                vid.muted = true;
-
-                vid.playsInline = true;
-
-
-
-                mediaContainer.appendChild(vid);
-
-
-            }
+            mediaContainer.appendChild(vid);
 
 
         }
+
 
 
     });
@@ -422,8 +449,12 @@ function openProject(id){
 
 
 
+
+
     description.textContent =
     project.description;
+
+
 
 
 
@@ -432,8 +463,12 @@ function openProject(id){
 
 
 
+
+
     year.textContent =
     project.year;
+
+
 
 
 
@@ -442,8 +477,11 @@ function openProject(id){
 
 
 
+
+
     link.href =
     project.link;
+
 
 
 
@@ -478,13 +516,21 @@ function closeLightbox(){
 
 
 
-    document.body.style.overflow="";
+    document.body.style.overflow =
+    "";
+
+
 
 
 
     video.pause();
 
-    video.currentTime=0;
+
+    video.currentTime = 0;
+
+
+
+    video.src = "";
 
 
 
@@ -514,12 +560,13 @@ closeLightbox
 
 
 
+
 overlay.addEventListener(
 "click",
 (e)=>{
 
 
-    if(e.target===overlay){
+    if(e.target === overlay){
 
 
         closeLightbox();
