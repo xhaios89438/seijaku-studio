@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Seijaku Studio</title>
@@ -18,9 +19,11 @@
 
 <header class="site-header">
 
+
     <a href="index.html" class="logo">
         Seijaku Design
     </a>
+
 
 
     <nav>
@@ -31,7 +34,9 @@
 
     </nav>
 
+
 </header>
+
 
 
 
@@ -43,124 +48,76 @@
 
 
 
-<!-- PROJECT 1 -->
+    <div class="gallery-item"
+         data-project="modular-a">
 
+        <img 
+        src="images/design-01.webp"
+        alt="Modular A">
 
-<div class="gallery-item"
 
-data-title="Modular A"
+        <div class="overlay">
 
-data-image="images/design-01.png"
+            <h2>
+                Modular A
+            </h2>
 
-data-second="images/design-01-2.png"
+        </div>
 
-data-description="A modular furniture system exploring flexibility and minimal form."
+    </div>
 
-data-material="Oak / Steel"
 
-data-year="2026"
 
-data-dimensions="1200 × 600 × 450mm"
 
-data-link="projects/design-01.html">
 
 
-<img src="images/design-01.png" alt="Modular A">
+    <div class="gallery-item"
+         data-project="chair-b">
 
 
-<div class="overlay">
+        <img 
+        src="images/design-02.webp"
+        alt="b Chair">
 
-<h2>
-Modular A
-</h2>
 
-</div>
+        <div class="overlay">
 
+            <h2>
+                b Chair
+            </h2>
 
-</div>
+        </div>
 
 
+    </div>
 
 
 
 
-<!-- PROJECT 2 -->
 
 
-<div class="gallery-item"
 
-data-title="b Chair"
+    <div class="gallery-item"
+         data-project="table-c">
 
-data-image="images/design-02.png"
 
-data-second="images/design-02-2.png"
+        <img 
+        src="images/design-03.webp"
+        alt="Table C">
 
-data-description="A chair design focused on simplicity, comfort and structure."
 
-data-material="Ash Wood / Fabric"
+        <div class="overlay">
 
-data-year="2026"
+            <h2>
+                Table C
+            </h2>
 
-data-dimensions="700 × 650 × 800mm"
+        </div>
 
-data-link="projects/design-02.html">
 
+    </div>
 
-<img src="images/design-02.png" alt="b Chair">
 
-
-<div class="overlay">
-
-<h2>
-b Chair
-</h2>
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<!-- PROJECT 3 -->
-
-
-<div class="gallery-item"
-
-data-title="Table C"
-
-data-image="images/design-03.png"
-
-data-second="images/design-03-2.png"
-
-data-description="A contemporary table exploring balance between material and proportion."
-
-data-material="Walnut / Aluminium"
-
-data-year="2026"
-
-data-dimensions="1600 × 800 × 740mm"
-
-data-link="projects/design-03.html">
-
-
-<img src="images/design-03.png" alt="Table C">
-
-
-<div class="overlay">
-
-<h2>
-Table C
-</h2>
-
-</div>
-
-
-</div>
 
 
 
@@ -176,178 +133,194 @@ Table C
 
 
 
+
 <!-- LIGHTBOX -->
 
 
 <div id="lightbox-overlay">
 
 
-<div id="lightbox">
 
+    <div id="lightbox">
 
 
-<button id="close-btn">
 
-&times;
+        <button id="close-btn">
+            &times;
+        </button>
 
-</button>
 
 
 
 
+        <!-- HERO MEDIA -->
 
 
-<img 
+        <div id="hero-media">
 
-id="lightbox-image"
 
-src=""
+            <img 
+            id="lightbox-image"
+            src=""
+            alt="">
 
-alt="">
 
 
+            <video
+            id="lightbox-video"
+            muted
+            loop
+            playsinline>
+            </video>
 
 
+        </div>
 
 
 
 
-<div class="lightbox-details">
 
 
 
 
 
-<div class="second-image">
+        <!-- PROJECT MEDIA -->
 
 
-<img
+        <div id="project-media">
 
-id="second-image"
 
-src=""
+        </div>
 
-alt="">
 
 
-</div>
 
 
 
 
 
 
+        <!-- DETAILS -->
 
-<div class="project-info">
 
+        <div class="project-info">
 
 
-<h2 id="lightbox-title"></h2>
 
+            <h2 id="lightbox-title">
+            </h2>
 
 
 
-<p id="project-description"></p>
 
 
+            <p id="project-description">
+            </p>
 
 
 
-<div class="details">
 
 
 
-<p>
+            <div class="details">
 
-<strong>
-Material
-</strong>
 
-<br>
 
-<span id="project-material"></span>
+                <p>
 
-</p>
+                    <strong>
+                    Material
+                    </strong>
 
+                    <br>
 
+                    <span id="project-material"></span>
 
+                </p>
 
 
-<p>
 
-<strong>
-Year
-</strong>
 
-<br>
 
-<span id="project-year"></span>
+                <p>
 
-</p>
+                    <strong>
+                    Year
+                    </strong>
 
+                    <br>
 
+                    <span id="project-year"></span>
 
+                </p>
 
 
-<p>
 
-<strong>
-Dimensions
-</strong>
 
-<br>
 
-<span id="project-dimensions"></span>
 
-</p>
+                <p>
 
+                    <strong>
+                    Dimensions
+                    </strong>
 
+                    <br>
 
+                    <span id="project-dimensions"></span>
 
-</div>
+                </p>
 
 
 
 
-</div>
+            </div>
 
 
 
 
-</div>
 
+        </div>
 
 
 
 
 
 
-<div class="lightbox-links">
 
 
-<a id="project-link" href="#">
+        <div class="lightbox-links">
 
-View Project →
 
-</a>
 
+            <a 
+            id="project-link"
+            href="#">
 
+                View Project →
 
+            </a>
 
-<a href="about.html">
 
-Contact →
 
-</a>
 
+            <a href="about.html">
 
-</div>
+                Contact →
 
+            </a>
 
 
 
 
-</div>
+        </div>
+
+
+
+
+
+    </div>
+
 
 
 </div>
@@ -361,5 +334,8 @@ Contact →
 
 
 </body>
+
+
+</html>
 
 
