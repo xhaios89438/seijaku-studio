@@ -14,22 +14,15 @@
 
 
 body{
-
     background:white;
-
     color:black;
-
     font-family:Arial, Helvetica, sans-serif;
-
 }
 
 
 a{
-
     color:inherit;
-
     text-decoration:none;
-
 }
 
 
@@ -65,7 +58,6 @@ a{
 }
 
 
-
 nav{
 
     display:flex;
@@ -99,6 +91,7 @@ nav a:hover{
 
 
 
+
 /* GALLERY */
 
 
@@ -115,7 +108,6 @@ nav a:hover{
 }
 
 
-
 .gallery-item{
 
     position:relative;
@@ -129,7 +121,6 @@ nav a:hover{
 }
 
 
-
 .gallery-item img{
 
     width:100%;
@@ -140,11 +131,9 @@ nav a:hover{
 
     display:block;
 
-    transition:.45s;
+    transition:.45s ease;
 
 }
-
-
 
 
 .gallery-item:hover img{
@@ -152,9 +141,6 @@ nav a:hover{
     transform:scale(1.03);
 
 }
-
-
-
 
 
 .overlay{
@@ -171,12 +157,9 @@ nav a:hover{
 
     opacity:0;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
-
-
-
 
 
 .gallery-item:hover .overlay{
@@ -184,9 +167,6 @@ nav a:hover{
     opacity:1;
 
 }
-
-
-
 
 
 .overlay h2{
@@ -207,7 +187,7 @@ nav a:hover{
 
 
 
-/* LIGHTBOX */
+/* LIGHTBOX BACKGROUND */
 
 
 #lightbox-overlay{
@@ -229,7 +209,12 @@ nav a:hover{
 
 
 
-    display:none;
+
+    display:flex;
+
+
+
+    justify-content:center;
 
 
 
@@ -239,9 +224,11 @@ nav a:hover{
 
 
 
+    padding:20px;
+
+
 
     background:rgba(255,255,255,.15);
-
 
 
 
@@ -252,23 +239,35 @@ nav a:hover{
 
 
 
-
     z-index:1000;
 
 
 
 
-    padding:20px;
+    opacity:0;
+
+
+    visibility:hidden;
+
+
+    transition:opacity .3s ease, visibility .3s ease;
 
 
 }
+
+
 
 
 
 
 #lightbox-overlay.active{
 
-    display:block;
+
+    opacity:1;
+
+
+    visibility:visible;
+
 
 }
 
@@ -276,6 +275,10 @@ nav a:hover{
 
 
 
+
+
+
+/* LIGHTBOX BOX */
 
 
 #lightbox{
@@ -285,19 +288,7 @@ nav a:hover{
 
 
 
-    min-height:calc(100vh - 170px);
-
-
-
-
-    margin:0 auto 40px;
-
-
-
-
-
     background:white;
-
 
 
 
@@ -306,10 +297,12 @@ nav a:hover{
 
 
 
-
     padding:30px;
 
 
+
+
+    margin-bottom:40px;
 
 
 
@@ -322,6 +315,33 @@ nav a:hover{
 
 
 
+    transform:translateY(20px);
+
+
+
+    opacity:0;
+
+
+
+    transition:transform .35s ease, opacity .35s ease;
+
+
+}
+
+
+
+
+
+#lightbox-overlay.active #lightbox{
+
+
+    transform:translateY(0);
+
+
+
+    opacity:1;
+
+
 }
 
 
@@ -330,7 +350,9 @@ nav a:hover{
 
 
 
-/* CLOSE */
+
+
+/* CLOSE BUTTON */
 
 
 #close-btn{
@@ -339,12 +361,10 @@ nav a:hover{
     position:absolute;
 
 
-    top:-3px;
+    top:-5px;
 
 
-    right:-3px;
-
-
+    right:-5px;
 
 
 
@@ -355,15 +375,11 @@ nav a:hover{
 
 
 
+    background:transparent;
+
 
 
     border:none;
-
-
-
-
-    background:transparent;
-
 
 
 
@@ -371,10 +387,7 @@ nav a:hover{
 
 
 
-
-
     font-size:1.8rem;
-
 
 
 
@@ -382,24 +395,10 @@ nav a:hover{
 
 
 
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    justify-content:center;
-
-
-
-
-    z-index:20;
-
+    z-index:10;
 
 
 }
-
 
 
 
@@ -417,7 +416,7 @@ nav a:hover{
 
 
 
-/* HERO */
+/* HERO MEDIA */
 
 
 #hero-media{
@@ -454,10 +453,153 @@ nav a:hover{
 
 
 
-
 #lightbox-video{
 
     display:none;
+
+}
+
+
+
+
+
+
+
+
+
+/* PROJECT INFORMATION */
+
+
+.project-info{
+
+    margin-bottom:60px;
+
+}
+
+
+
+.project-info h2{
+
+
+    font-family:'ISOCP', Arial, sans-serif;
+
+
+
+    font-size:3rem;
+
+
+
+    font-weight:400;
+
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+#project-description{
+
+
+    max-width:650px;
+
+
+
+    line-height:1.7;
+
+
+
+    margin-bottom:40px;
+
+
+}
+
+
+
+
+.details{
+
+
+    display:flex;
+
+
+
+    gap:60px;
+
+
+
+    flex-wrap:wrap;
+
+
+}
+
+
+.details p{
+
+
+    line-height:1.5;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* BUTTONS */
+
+
+.lightbox-links{
+
+
+    display:flex;
+
+
+
+    gap:40px;
+
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+.lightbox-links a{
+
+
+    border:1px solid black;
+
+
+
+    padding:12px 20px;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.lightbox-links a:hover{
+
+
+    background:black;
+
+
+
+    color:white;
+
 
 }
 
@@ -483,19 +625,10 @@ nav a:hover{
 
 
 
-
     gap:20px;
 
 
-
-
-    margin-bottom:60px;
-
-
 }
-
-
-
 
 
 
@@ -506,6 +639,7 @@ nav a:hover{
     width:100%;
 
 
+
     display:block;
 
 
@@ -513,12 +647,11 @@ nav a:hover{
 
 
 
-
-
 .project-video{
 
 
     aspect-ratio:16/9;
+
 
 
     object-fit:cover;
@@ -534,191 +667,34 @@ nav a:hover{
 
 
 
-/* INFORMATION */
-
-
-.project-info{
-
-
-    display:grid;
-
-
-    grid-template-columns:1fr 1fr;
-
-
-    gap:60px;
-
-
-    margin-bottom:40px;
-
-
-}
-
-
-
-
-
-.project-info h2{
-
-
-    font-family:'ISOCP', Arial, sans-serif;
-
-
-    font-size:3rem;
-
-
-    font-weight:400;
-
-
-
-    margin-bottom:30px;
-
-
-
-}
-
-
-
-
-#project-description{
-
-
-    line-height:1.7;
-
-
-    max-width:500px;
-
-
-}
-
-
-
-
-
-
-.details p{
-
-
-    margin-bottom:25px;
-
-
-    line-height:1.5;
-
-
-}
-
-
-
-
-
-
-
-
-/* LINKS */
-
-
-.lightbox-links{
-
-
-    display:flex;
-
-
-    gap:40px;
-
-
-    margin-top:40px;
-
-
-}
-
-
-
-
-
-.lightbox-links a{
-
-
-    border:1px solid black;
-
-
-    padding:12px 20px;
-
-
-
-    transition:.3s;
-
-
-}
-
-
-
-
-
-.lightbox-links a:hover{
-
-
-    background:black;
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-
-
-
 /* PROJECT PAGES */
 
 
 .about-page{
 
-
     max-width:800px;
-
 
     margin:120px auto;
 
-
     padding:40px;
 
-
 }
-
-
-
-
 
 
 .project-page{
 
-
     max-width:1200px;
-
 
     margin:auto;
 
-
     padding:40px;
-
 
 }
 
 
-
-
-
-
-
 .hero-image img{
 
-
     width:100%;
-
 
 }
 
@@ -736,28 +712,9 @@ nav a:hover{
 @media(max-width:900px){
 
 
-
     .gallery{
 
-
         grid-template-columns:repeat(2,1fr);
-
-
-    }
-
-
-
-
-
-
-    .project-info{
-
-
-        grid-template-columns:1fr;
-
-
-        gap:30px;
-
 
     }
 
@@ -767,13 +724,7 @@ nav a:hover{
 
 
 
-
-
-
-
-
 @media(max-width:600px){
-
 
 
     .site-header{
@@ -792,10 +743,6 @@ nav a:hover{
 
 
 
-
-
-
-
     .gallery{
 
 
@@ -803,10 +750,6 @@ nav a:hover{
 
 
     }
-
-
-
-
 
 
 
@@ -823,10 +766,6 @@ nav a:hover{
 
 
 
-
-
-
-
     #lightbox-image,
     #lightbox-video{
 
@@ -835,9 +774,6 @@ nav a:hover{
 
 
     }
-
-
-
 
 
 
@@ -851,17 +787,16 @@ nav a:hover{
 
 
 
-
-
-
-    .lightbox-links{
+    .details{
 
 
         flex-direction:column;
 
 
-    }
+        gap:20px;
 
+
+    }
 
 
 }
