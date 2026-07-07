@@ -73,7 +73,7 @@ nav a{
 
     letter-spacing:.02em;
 
-    transition:.25s;
+    transition:.25s ease;
 
 }
 
@@ -131,7 +131,7 @@ nav a:hover{
 
     display:block;
 
-    transition:.45s ease;
+    transition:transform .45s ease;
 
 }
 
@@ -157,7 +157,7 @@ nav a:hover{
 
     opacity:0;
 
-    transition:.35s ease;
+    transition:opacity .35s ease;
 
 }
 
@@ -192,82 +192,48 @@ nav a:hover{
 
 #lightbox-overlay{
 
-
     position:fixed;
-
 
     top:120px;
 
-
     left:0;
-
 
     right:0;
 
-
     bottom:0;
-
-
-
 
     display:flex;
 
-
-
     justify-content:center;
 
-
-
+    align-items:flex-start;
 
     overflow-y:auto;
 
-
-
-
     padding:20px;
 
-
-
     background:rgba(255,255,255,.15);
-
-
 
     backdrop-filter:blur(12px);
 
     -webkit-backdrop-filter:blur(12px);
 
-
-
-
     z-index:1000;
-
-
-
 
     opacity:0;
 
-
     visibility:hidden;
 
-
-    transition:opacity .3s ease, visibility .3s ease;
-
+    transition:opacity .35s ease, visibility .35s ease;
 
 }
-
-
-
-
 
 
 #lightbox-overlay.active{
 
-
     opacity:1;
 
-
     visibility:visible;
-
 
 }
 
@@ -278,69 +244,40 @@ nav a:hover{
 
 
 
-/* LIGHTBOX BOX */
+
+/* LIGHTBOX CONTAINER */
 
 
 #lightbox{
 
-
     width:min(1200px,90vw);
-
-
 
     background:white;
 
-
-
     border:8px solid white;
-
-
-
 
     padding:30px;
 
-
-
-
-    margin-bottom:40px;
-
-
+    margin:0 auto 40px;
 
     position:relative;
 
-
-
-
     box-shadow:0 20px 60px rgba(0,0,0,.12);
-
-
 
     transform:translateY(20px);
 
-
-
     opacity:0;
 
-
-
     transition:transform .35s ease, opacity .35s ease;
-
 
 }
 
 
-
-
-
 #lightbox-overlay.active #lightbox{
-
 
     transform:translateY(0);
 
-
-
     opacity:1;
-
 
 }
 
@@ -357,49 +294,29 @@ nav a:hover{
 
 #close-btn{
 
-
     position:absolute;
-
 
     top:-5px;
 
-
     right:-5px;
-
-
 
     width:32px;
 
-
     height:32px;
-
-
 
     background:transparent;
 
-
-
     border:none;
-
-
 
     cursor:pointer;
 
-
-
     font-size:1.8rem;
-
-
 
     color:#777;
 
-
-
-    z-index:10;
-
+    z-index:20;
 
 }
-
 
 
 #close-btn:hover{
@@ -416,7 +333,7 @@ nav a:hover{
 
 
 
-/* HERO MEDIA */
+/* HERO IMAGE */
 
 
 #hero-media{
@@ -426,31 +343,20 @@ nav a:hover{
 }
 
 
-
 #lightbox-image,
 #lightbox-video{
 
-
     width:100%;
-
 
     height:70vh;
 
-
-
     object-fit:cover;
-
-
 
     display:block;
 
-
-
     margin-bottom:50px;
 
-
 }
-
 
 
 #lightbox-video{
@@ -472,75 +378,51 @@ nav a:hover{
 
 .project-info{
 
+    width:100%;
+
     margin-bottom:60px;
 
 }
 
 
-
 .project-info h2{
-
 
     font-family:'ISOCP', Arial, sans-serif;
 
-
-
     font-size:3rem;
-
-
 
     font-weight:400;
 
-
-
     margin-bottom:30px;
 
-
 }
-
 
 
 #project-description{
 
-
     max-width:650px;
-
-
 
     line-height:1.7;
 
-
-
     margin-bottom:40px;
-
 
 }
 
 
-
-
 .details{
-
 
     display:flex;
 
-
-
     gap:60px;
 
-
-
     flex-wrap:wrap;
-
 
 }
 
 
 .details p{
 
-
     line-height:1.5;
-
 
 }
 
@@ -552,54 +434,36 @@ nav a:hover{
 
 
 
-/* BUTTONS */
+/* LINKS */
 
 
 .lightbox-links{
 
-
     display:flex;
-
-
 
     gap:40px;
 
-
-
     margin-top:40px;
 
-
 }
-
 
 
 .lightbox-links a{
 
-
     border:1px solid black;
-
-
 
     padding:12px 20px;
 
-
-
-    transition:.3s;
-
+    transition:.3s ease;
 
 }
 
 
-
 .lightbox-links a:hover{
-
 
     background:black;
 
-
-
     color:white;
-
 
 }
 
@@ -616,85 +480,32 @@ nav a:hover{
 
 #project-media{
 
+    width:100%;
 
     display:grid;
 
-
-
     grid-template-columns:repeat(2,1fr);
-
-
 
     gap:20px;
 
-
 }
-
 
 
 .project-image,
 .project-video{
 
-
     width:100%;
-
-
 
     display:block;
 
-
 }
-
 
 
 .project-video{
 
-
     aspect-ratio:16/9;
 
-
-
     object-fit:cover;
-
-
-}
-
-
-
-
-
-
-
-
-
-/* PROJECT PAGES */
-
-
-.about-page{
-
-    max-width:800px;
-
-    margin:120px auto;
-
-    padding:40px;
-
-}
-
-
-.project-page{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    padding:40px;
-
-}
-
-
-.hero-image img{
-
-    width:100%;
 
 }
 
@@ -711,14 +522,11 @@ nav a:hover{
 
 @media(max-width:900px){
 
-
     .gallery{
 
         grid-template-columns:repeat(2,1fr);
 
     }
-
-
 
 }
 
@@ -726,77 +534,54 @@ nav a:hover{
 
 @media(max-width:600px){
 
-
     .site-header{
-
 
         flex-direction:column;
 
-
         align-items:flex-start;
-
 
         gap:20px;
 
-
     }
-
 
 
     .gallery{
 
-
         grid-template-columns:1fr;
 
-
     }
-
 
 
     #lightbox{
 
-
         width:94vw;
-
 
         padding:20px;
 
-
     }
-
 
 
     #lightbox-image,
     #lightbox-video{
 
-
         height:50vh;
 
-
     }
-
 
 
     #project-media{
 
-
         grid-template-columns:1fr;
 
-
     }
-
 
 
     .details{
 
-
         flex-direction:column;
-
 
         gap:20px;
 
-
     }
-
 
 }
