@@ -1,9 +1,8 @@
 const projects = {
 
-
     "modular-a": {
 
-        title:"Modular A",
+        title: "Modular A",
 
         description:
         "A modular furniture system exploring flexibility and minimal form.",
@@ -23,7 +22,7 @@ const projects = {
         hero:
         "images/modular-a/hero.webp",
 
-        media:[
+        media: [
 
             {
                 type:"image",
@@ -128,7 +127,6 @@ const projects = {
 
     }
 
-
 };
 
 
@@ -194,19 +192,13 @@ document.getElementById("close-btn");
 
 
 
-items.forEach(item=>{
+items.forEach(item => {
 
+    item.addEventListener("click", () => {
 
-    item.addEventListener("click",()=>{
-
-
-        openProject(
-            item.dataset.project
-        );
-
+        openProject(item.dataset.project);
 
     });
-
 
 });
 
@@ -231,16 +223,18 @@ function openProject(id){
 
 
 
-    image.style.display="block";
+    image.style.display = "block";
 
-    video.style.display="none";
+    video.style.display = "none";
 
 
     video.pause();
 
-    video.src="";
+    video.src = "";
 
-    mediaContainer.innerHTML="";
+    mediaContainer.innerHTML = "";
+
+
 
 
 
@@ -253,13 +247,10 @@ function openProject(id){
 
 
 
+    project.media.forEach(media => {
 
 
-    project.media.forEach(media=>{
-
-
-
-        if(media.type==="image"){
+        if(media.type === "image"){
 
 
             const img =
@@ -284,7 +275,8 @@ function openProject(id){
 
 
 
-        if(media.type==="video"){
+
+        if(media.type === "video"){
 
 
             const vid =
@@ -354,7 +346,7 @@ function openProject(id){
     overlay.classList.add("active");
 
 
-    document.body.style.overflow="hidden";
+    document.body.style.overflow = "hidden";
 
 
 }
@@ -370,28 +362,26 @@ function openProject(id){
 function closeLightbox(){
 
 
-
     overlay.classList.remove("active");
 
 
-
-    document.body.style.overflow="";
-
+    document.body.style.overflow = "";
 
 
-    setTimeout(()=>{
+
+    setTimeout(() => {
 
 
         video.pause();
 
 
-        video.currentTime=0;
+        video.currentTime = 0;
 
 
-        video.src="";
+        video.src = "";
 
 
-        mediaContainer.innerHTML="";
+        mediaContainer.innerHTML = "";
 
 
     },350);
@@ -422,14 +412,12 @@ closeLightbox
 
 overlay.addEventListener(
 "click",
-(e)=>{
+(event) => {
 
 
-    if(e.target===overlay){
-
+    if(event.target === overlay){
 
         closeLightbox();
-
 
     }
 
@@ -446,14 +434,12 @@ overlay.addEventListener(
 
 document.addEventListener(
 "keydown",
-(e)=>{
+(event)=>{
 
 
-    if(e.key==="Escape"){
-
+    if(event.key === "Escape"){
 
         closeLightbox();
-
 
     }
 
