@@ -13,6 +13,11 @@
 }
 
 
+html{
+    scroll-behavior:smooth;
+}
+
+
 body{
     background:white;
     color:black;
@@ -73,7 +78,7 @@ nav a{
 
     letter-spacing:.02em;
 
-    transition:.25s ease;
+    transition:opacity .25s ease;
 
 }
 
@@ -81,6 +86,212 @@ nav a{
 nav a:hover{
 
     opacity:.6;
+
+}
+
+
+
+
+
+
+
+
+
+/* LANDING SECTION */
+
+
+.landing{
+
+    min-height:calc(100vh - 120px);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    padding:40px;
+
+    animation:fadeIntro 1s ease forwards;
+
+}
+
+
+
+.intro{
+
+    max-width:700px;
+
+}
+
+
+
+.intro h1{
+
+    font-family:'ISOCP', Arial, sans-serif;
+
+    font-size:5rem;
+
+    font-weight:normal;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.definition{
+
+    margin-bottom:50px;
+
+}
+
+
+
+.definition p{
+
+    line-height:1.7;
+
+}
+
+
+
+.definition .word{
+
+    font-size:1.4rem;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.definition .type{
+
+    font-style:italic;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.studio-description{
+
+    max-width:600px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.05rem;
+
+}
+
+
+
+
+
+
+
+
+
+/* COLLECTION LINK */
+
+
+.collection-link{
+
+    position:absolute;
+
+    bottom:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:1.2rem;
+
+    transition:opacity .3s ease;
+
+}
+
+
+.collection-link:hover{
+
+    opacity:.6;
+
+}
+
+
+
+.chevron{
+
+    font-size:1.5rem;
+
+    animation:chevronMove 3s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes fadeIntro{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+@keyframes chevronMove{
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(8px);
+
+    }
 
 }
 
@@ -103,7 +314,7 @@ nav a:hover{
 
     gap:8px;
 
-    padding:0 8px 8px;
+    padding:120px 8px 8px;
 
 }
 
@@ -187,7 +398,7 @@ nav a:hover{
 
 
 
-/* LIGHTBOX BACKGROUND */
+/* LIGHTBOX */
 
 
 #lightbox-overlay{
@@ -229,6 +440,7 @@ nav a:hover{
 }
 
 
+
 #lightbox-overlay.active{
 
     opacity:1;
@@ -237,15 +449,6 @@ nav a:hover{
 
 }
 
-
-
-
-
-
-
-
-
-/* LIGHTBOX CONTAINER */
 
 
 #lightbox{
@@ -271,6 +474,7 @@ nav a:hover{
     transition:transform .35s ease, opacity .35s ease;
 
 }
+
 
 
 #lightbox-overlay.active #lightbox{
@@ -314,8 +518,6 @@ nav a:hover{
 
     color:#777;
 
-    z-index:20;
-
 }
 
 
@@ -333,7 +535,7 @@ nav a:hover{
 
 
 
-/* HERO IMAGE */
+/* LIGHTBOX CONTENT */
 
 
 #hero-media{
@@ -367,22 +569,12 @@ nav a:hover{
 
 
 
-
-
-
-
-
-
-/* PROJECT INFORMATION */
-
-
 .project-info{
-
-    width:100%;
 
     margin-bottom:60px;
 
 }
+
 
 
 .project-info h2{
@@ -398,6 +590,7 @@ nav a:hover{
 }
 
 
+
 #project-description{
 
     max-width:650px;
@@ -407,6 +600,7 @@ nav a:hover{
     margin-bottom:40px;
 
 }
+
 
 
 .details{
@@ -420,22 +614,6 @@ nav a:hover{
 }
 
 
-.details p{
-
-    line-height:1.5;
-
-}
-
-
-
-
-
-
-
-
-
-/* LINKS */
-
 
 .lightbox-links{
 
@@ -448,39 +626,18 @@ nav a:hover{
 }
 
 
+
 .lightbox-links a{
 
     border:1px solid black;
 
     padding:12px 20px;
 
-    transition:.3s ease;
-
 }
 
-
-.lightbox-links a:hover{
-
-    background:black;
-
-    color:white;
-
-}
-
-
-
-
-
-
-
-
-
-/* EXTRA MEDIA */
 
 
 #project-media{
-
-    width:100%;
 
     display:grid;
 
@@ -489,6 +646,7 @@ nav a:hover{
     gap:20px;
 
 }
+
 
 
 .project-image,
@@ -501,13 +659,6 @@ nav a:hover{
 }
 
 
-.project-video{
-
-    aspect-ratio:16/9;
-
-    object-fit:cover;
-
-}
 
 
 
@@ -515,12 +666,11 @@ nav a:hover{
 
 
 
-
-
-/* RESPONSIVE */
+/* MOBILE */
 
 
 @media(max-width:900px){
+
 
     .gallery{
 
@@ -528,11 +678,13 @@ nav a:hover{
 
     }
 
+
 }
 
 
 
 @media(max-width:600px){
+
 
     .site-header{
 
@@ -545,28 +697,21 @@ nav a:hover{
     }
 
 
+
+    .intro h1{
+
+        font-size:3.5rem;
+
+    }
+
+
+
     .gallery{
 
         grid-template-columns:1fr;
 
     }
 
-
-    #lightbox{
-
-        width:94vw;
-
-        padding:20px;
-
-    }
-
-
-    #lightbox-image,
-    #lightbox-video{
-
-        height:50vh;
-
-    }
 
 
     #project-media{
@@ -575,13 +720,5 @@ nav a:hover{
 
     }
 
-
-    .details{
-
-        flex-direction:column;
-
-        gap:20px;
-
-    }
 
 }
