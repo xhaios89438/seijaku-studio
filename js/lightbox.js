@@ -137,6 +137,52 @@ const projects = {
 
 
 
+/* HEADER SCROLL BEHAVIOUR */
+
+
+const header =
+document.querySelector(".site-header");
+
+
+const landing =
+document.querySelector(".landing");
+
+
+
+window.addEventListener("scroll", () => {
+
+
+    const landingHeight =
+    landing.offsetHeight;
+
+
+
+    if(window.scrollY > landingHeight - 150){
+
+        header.classList.add("show-header");
+
+    }
+
+    else{
+
+        header.classList.remove("show-header");
+
+    }
+
+
+});
+
+
+
+
+
+
+
+
+
+/* LIGHTBOX */
+
+
 const items =
 document.querySelectorAll(".gallery-item");
 
