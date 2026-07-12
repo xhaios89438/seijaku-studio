@@ -47,7 +47,7 @@ a{
 
     align-items:center;
 
-    padding:25px;
+    padding:25px 60px;
 
     font-family:'ISOCP', Arial, sans-serif;
 
@@ -97,7 +97,7 @@ nav a:hover{
 
 
 
-/* LANDING */
+/* LANDING SECTION */
 
 
 .landing{
@@ -128,7 +128,7 @@ nav a:hover{
 
 .intro{
 
-    max-width:750px;
+    max-width:900px;
 
 }
 
@@ -166,25 +166,13 @@ nav a:hover{
 
 
 
-.definition .word span{
-
-    margin-left:25px;
-
-    font-style:italic;
-
-    color:#666;
-
-}
-
-
-
 .definition .meaning{
 
     color:#666;
 
     line-height:1.8;
 
-    max-width:700px;
+    white-space:nowrap;
 
 }
 
@@ -234,7 +222,6 @@ nav a:hover{
 }
 
 
-
 .collection-link:hover{
 
     color:#333;
@@ -261,13 +248,33 @@ nav a:hover{
 
 
 
+@keyframes chevronMove{
+
+    0%,
+    100%{
+
+        margin-top:0;
+
+    }
+
+
+    50%{
+
+        margin-top:8px;
+
+    }
+
+}
 
 
 
 
 
 
-/* ANIMATIONS */
+
+
+
+/* INTRO ANIMATION */
 
 
 @keyframes fadeIntro{
@@ -286,26 +293,6 @@ nav a:hover{
         opacity:1;
 
         transform:translateY(-40px);
-
-    }
-
-}
-
-
-
-@keyframes chevronMove{
-
-    0%,
-    100%{
-
-        transform:rotate(45deg) translateY(0);
-
-    }
-
-
-    50%{
-
-        transform:rotate(45deg) translateY(6px);
 
     }
 
@@ -460,6 +447,7 @@ nav a:hover{
     transition:opacity .35s ease, visibility .35s ease;
 
 }
+
 
 
 #lightbox-overlay.active{
@@ -684,11 +672,21 @@ nav a:hover{
 
 
 
+/* MOBILE */
+
+
 @media(max-width:900px){
 
     .gallery{
 
         grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .definition .meaning{
+
+        white-space:normal;
 
     }
 
@@ -699,6 +697,8 @@ nav a:hover{
 @media(max-width:600px){
 
     .site-header{
+
+        padding:25px;
 
         flex-direction:column;
 
