@@ -41,6 +41,14 @@ a{
 
 .site-header{
 
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
     display:flex;
 
     justify-content:space-between;
@@ -51,7 +59,33 @@ a{
 
     font-family:'ISOCP', Arial, sans-serif;
 
+    z-index:2000;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    transform:translateY(-100%);
+
+    opacity:0;
+
+    transition:
+    transform .4s ease,
+    opacity .4s ease;
+
 }
+
+
+.site-header.show-header{
+
+    transform:translateY(0);
+
+    opacity:1;
+
+}
+
 
 
 .logo{
@@ -276,9 +310,6 @@ nav a:hover{
 
 
 
-
-
-/* INTRO FADE */
 
 
 @keyframes fadeIntro{
@@ -703,12 +734,6 @@ nav a:hover{
     .site-header{
 
         padding:25px;
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:20px;
 
     }
 
