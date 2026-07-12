@@ -97,7 +97,7 @@ nav a:hover{
 
 
 
-/* LANDING SECTION */
+/* LANDING */
 
 
 .landing{
@@ -242,6 +242,10 @@ nav a:hover{
 
     transform:rotate(45deg);
 
+    position:relative;
+
+    top:0;
+
     animation:chevronMove 3s ease-in-out infinite;
 
 }
@@ -253,14 +257,14 @@ nav a:hover{
     0%,
     100%{
 
-        margin-top:0;
+        top:0;
 
     }
 
 
     50%{
 
-        margin-top:8px;
+        top:8px;
 
     }
 
@@ -274,7 +278,7 @@ nav a:hover{
 
 
 
-/* INTRO ANIMATION */
+/* INTRO FADE */
 
 
 @keyframes fadeIntro{
@@ -322,7 +326,6 @@ nav a:hover{
 }
 
 
-
 .gallery-item{
 
     position:relative;
@@ -334,7 +337,6 @@ nav a:hover{
     cursor:pointer;
 
 }
-
 
 
 .gallery-item img{
@@ -352,13 +354,11 @@ nav a:hover{
 }
 
 
-
 .gallery-item:hover img{
 
     transform:scale(1.03);
 
 }
-
 
 
 .overlay{
@@ -380,13 +380,11 @@ nav a:hover{
 }
 
 
-
 .gallery-item:hover .overlay{
 
     opacity:1;
 
 }
-
 
 
 .overlay h2{
@@ -527,7 +525,6 @@ nav a:hover{
 }
 
 
-
 #close-btn:hover{
 
     color:#333;
@@ -564,7 +561,6 @@ nav a:hover{
     margin-bottom:50px;
 
 }
-
 
 
 #lightbox-video{
@@ -654,7 +650,6 @@ nav a:hover{
 }
 
 
-
 .project-image,
 .project-video{
 
@@ -672,7 +667,7 @@ nav a:hover{
 
 
 
-/* MOBILE */
+/* RESPONSIVE */
 
 
 @media(max-width:900px){
