@@ -136,7 +136,7 @@ nav a:hover{
 
 .landing{
 
-    min-height:calc(100vh - 90px);
+    min-height:100vh;
 
     display:flex;
 
@@ -152,7 +152,7 @@ nav a:hover{
 
     padding:40px;
 
-    transform:translateY(-40px);
+    transform:translateY(0);
 
     animation:fadeIntro 1s ease forwards;
 
@@ -239,7 +239,7 @@ nav a:hover{
 
     position:absolute;
 
-    bottom:55px;
+    bottom:75px;
 
     display:flex;
 
@@ -280,7 +280,7 @@ nav a:hover{
 
     top:0;
 
-    animation:chevronMove 3s ease-in-out infinite;
+    animation:chevronMove 5s ease-in-out infinite;
 
 }
 
@@ -312,6 +312,9 @@ nav a:hover{
 
 
 
+/* INTRO FADE */
+
+
 @keyframes fadeIntro{
 
     from{
@@ -327,7 +330,7 @@ nav a:hover{
 
         opacity:1;
 
-        transform:translateY(-40px);
+        transform:translateY(0);
 
     }
 
