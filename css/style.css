@@ -81,7 +81,6 @@ a{
 }
 
 
-
 .logo{
 
     font-size:3rem;
@@ -145,13 +144,11 @@ nav a:hover{
 }
 
 
-
 .intro{
 
     max-width:900px;
 
 }
-
 
 
 .intro h1{
@@ -167,13 +164,11 @@ nav a:hover{
 }
 
 
-
 .definition{
 
     margin-bottom:55px;
 
 }
-
 
 
 .definition .word{
@@ -185,7 +180,6 @@ nav a:hover{
 }
 
 
-
 .definition .meaning{
 
     color:#666;
@@ -195,7 +189,6 @@ nav a:hover{
     white-space:nowrap;
 
 }
-
 
 
 .studio-description{
@@ -241,7 +234,6 @@ nav a:hover{
 }
 
 
-
 .chevron{
 
     width:12px;
@@ -261,7 +253,6 @@ nav a:hover{
     animation:chevronMove 5s ease-in-out infinite;
 
 }
-
 
 
 @keyframes chevronMove{
@@ -322,7 +313,6 @@ nav a:hover{
 }
 
 
-
 .gallery-item{
 
     position:relative;
@@ -334,7 +324,6 @@ nav a:hover{
     cursor:pointer;
 
 }
-
 
 
 .gallery-item img{
@@ -352,13 +341,11 @@ nav a:hover{
 }
 
 
-
 .gallery-item:hover img{
 
     transform:scale(1.03);
 
 }
-
 
 
 .overlay{
@@ -380,13 +367,11 @@ nav a:hover{
 }
 
 
-
 .gallery-item:hover .overlay{
 
     opacity:1;
 
 }
-
 
 
 .overlay h2{
@@ -441,7 +426,6 @@ nav a:hover{
 }
 
 
-
 #lightbox-overlay.active{
 
     opacity:1;
@@ -449,7 +433,6 @@ nav a:hover{
     visibility:visible;
 
 }
-
 
 
 #lightbox{
@@ -475,7 +458,6 @@ nav a:hover{
     transition:transform .35s ease, opacity .35s ease;
 
 }
-
 
 
 #lightbox-overlay.active #lightbox{
@@ -510,7 +492,6 @@ nav a:hover{
     color:#777;
 
 }
-
 
 
 #close-btn:hover{
@@ -550,9 +531,28 @@ nav a:hover{
 }
 
 
-.project-info{
+/* PROJECT CONTENT */
+
+.project-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:60px;
 
     margin-bottom:60px;
+
+}
+
+
+.project-info{
+
+    margin-bottom:0;
+
+    max-width:800px;
 
 }
 
@@ -612,16 +612,16 @@ nav a:hover{
 
 .lightbox-links{
 
-    position:absolute;
+    flex-shrink:0;
 
-    top:30px;
-
-    right:30px;
+    margin-top:0;
 
 }
 
 
 .lightbox-links a{
+
+    display:inline-block;
 
     border:1px solid black;
 
@@ -629,6 +629,8 @@ nav a:hover{
 
 }
 
+
+/* PROJECT MEDIA */
 
 #project-media{
 
@@ -671,7 +673,6 @@ nav a:hover{
 }
 
 
-
 @media(max-width:600px){
 
     .site-header{
@@ -702,11 +703,11 @@ nav a:hover{
     }
 
 
-    .lightbox-links{
+    .project-content{
 
-        position:static;
+        flex-direction:column;
 
-        margin-top:30px;
+        gap:30px;
 
     }
 
