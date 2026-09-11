@@ -5,16 +5,16 @@ const projects = {
         title: "Modular A",
 
         description:
-        "A modular furniture system exploring flexibility and minimal form.",
+        "Modular A is a shelving system easily incorporated into any living space, which can adapt to changing environments or user needs. The modular pieces can be re-arranged to form shelf units, bedside tables, coffee tables or in any way needed to fit the space",
 
         material:
-        "Oak / Steel",
+        "Re-engineered Oak worktop / Neodymium magnets",
 
         year:
-        "2026",
+        "2019",
 
         dimensions:
-        "1200 × 600 × 450mm",
+        "(H) 26cm (W) 38cm (D) 25cm",
 
         link:
         "projects/design-01.html",
@@ -47,16 +47,16 @@ const projects = {
         title:"b Chair",
 
         description:
-        "A chair design focused on simplicity, comfort and structure.",
+        "b chair is an everyday utility and dining chair designed with a simple core principle, to be as sustainable as possible. b chair is made from a single piece of composite plywood, which uses heat reactive bendable resin to create its unique sculptural form and greatly reduce the complexity of the manufacturing process. As b chair is made from a single piece of plywood, there is no need for any other component, vastly reducing its carbon footprint, and ensuring easy and harmless recycling when it is no longer needed.",
 
         material:
-        "Ash Wood / Fabric",
+        "FSC plywood / resin",
 
         year:
-        "2026",
+        "2022",
 
         dimensions:
-        "700 × 650 × 800mm",
+        "(H) 90cm (W) 45cm (D) 46cm",
 
         link:
         "projects/design-02.html",
@@ -89,16 +89,16 @@ const projects = {
         title:"Table C",
 
         description:
-        "A contemporary table exploring balance between material and proportion.",
+        "Table C was created to solve a problem found with all coffee tables. The table is either too close to your legs to freely move and stand up, or too far away to easily reach items on the table. Table C is designed to provide as much leg room as possible, along with having a floating table top which can be pulled closer to allow the user sitting down easy access to the table, or pushed away in order to move around",
 
         material:
-        "Walnut / Aluminium",
+        "FSC Plywood / resin / Steel Ball Bearings",
 
         year:
         "2026",
 
         dimensions:
-        "1600 × 800 × 740mm",
+        "(H) 52cm (W) 125cm (D) 90cm",
 
         link:
         "projects/design-03.html",
