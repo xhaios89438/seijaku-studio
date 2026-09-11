@@ -16,9 +16,6 @@ const projects = {
         dimensions:
         "(H) 26cm (W) 38cm (D) 25cm",
 
-        link:
-        "projects/design-01.html",
-
         hero:
         "images/modular-a/hero.webp",
 
@@ -58,9 +55,6 @@ const projects = {
         dimensions:
         "(H) 90cm (W) 45cm (D) 46cm",
 
-        link:
-        "projects/design-02.html",
-
         hero:
         "images/chair-b/hero.webp",
 
@@ -99,9 +93,6 @@ const projects = {
 
         dimensions:
         "(H) 52cm (W) 125cm (D) 90cm",
-
-        link:
-        "projects/design-03.html",
 
         hero:
         "images/table-c/hero.webp",
@@ -221,10 +212,6 @@ document.getElementById("project-year");
 
 const dimensions =
 document.getElementById("project-dimensions");
-
-
-const link =
-document.getElementById("project-link");
 
 
 const closeBtn =
@@ -378,10 +365,6 @@ function openProject(id){
 
     dimensions.textContent =
     project.dimensions;
-
-
-    link.href =
-    project.link;
 
 
 
