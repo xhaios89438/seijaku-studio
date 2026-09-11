@@ -614,14 +614,17 @@ nav a:hover{
 
 }
 
+.lightbox-links{
+    position:static;
+    flex-shrink:0;
+    margin-top:215px;
+}
 
 .lightbox-links a{
-
     display:inline-block;
-
     border:1px solid black;
-
     padding:12px 20px;
+
 
 }
 
