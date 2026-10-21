@@ -344,7 +344,7 @@ function openProject(id){
     project.title;
 
 
-    description.textContent =
+    description.innerHTML =
     project.description;
 
 
