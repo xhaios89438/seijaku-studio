@@ -5,7 +5,7 @@ const projects = {
         title: "Modular A",
 
         description:
-        "Modular A is a shelving system easily incorporated into any living space, which can adapt to changing environments or user needs. The modular pieces can be re-arranged to form shelf units, bedside tables, coffee tables or in any way needed to fit the space",
+        "Modular A is a shelving system easily incorporated into any living space, which can adapt to changing environments or user needs. <br><br> The modular pieces can be re-arranged to form shelf units, bedside tables, coffee tables or in any way needed to fit the space.",
 
         material:
         "Re-engineered Oak worktop / Neodymium magnets",
@@ -44,7 +44,7 @@ const projects = {
         title:"b Chair",
 
         description:
-        "b chair is an everyday utility and dining chair designed with a simple core principle, to be as sustainable as possible. b chair is made from a single piece of composite plywood, which uses heat reactive bendable resin to create its unique sculptural form and greatly reduce the complexity of the manufacturing process. As b chair is made from a single piece of plywood, there is no need for any other component, vastly reducing its carbon footprint, and ensuring easy and harmless recycling when it is no longer needed.",
+        "b chair is an everyday utility and dining chair designed with a simple core principle, to be as sustainable as possible. <br><br> b chair is made from a single piece of composite plywood, which uses heat reactive bendable resin to create its unique sculptural form and greatly reduce the complexity of the manufacturing process. <br><br> As b chair is made from a single piece of plywood, there is no need for any other component, vastly reducing its carbon footprint, and ensuring easy and harmless recycling when it is no longer needed.",
 
         material:
         "FSC plywood / resin",
@@ -76,7 +76,7 @@ media:[
         title:"Table C",
 
         description:
-        "Table C was created to solve a problem found with all coffee tables. The table is either too close to your legs to freely move and stand up, or too far away to easily reach items on the table. Table C is designed to provide as much leg room as possible, along with having a floating table top which can be pulled closer to allow the user sitting down easy access to the table, or pushed away in order to move around",
+        "Table C was created to solve a problem found with all coffee tables. The table is either too close to your legs to freely move and stand up, or too far away to easily reach items on the table. <br><br> Table C is designed to provide as much leg room as possible, along with having a floating table top which can be pulled closer to allow the user sitting down easy access to the table, or pushed away in order to move around",
 
         material:
         "FSC Plywood / resin / Steel Ball Bearings",
