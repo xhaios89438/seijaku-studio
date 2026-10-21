@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +16,17 @@
     max-width: 700px;
     margin: 180px auto 100px;
     padding: 0 30px;
+}
+
+.back-link {
+    display: inline-block;
+    color: #666;
+    margin-bottom: 35px;
+    transition: color .25s ease;
+}
+
+.back-link:hover {
+    color: #000;
 }
 
 .about-page h1 {
@@ -129,6 +141,10 @@
 
 <main class="about-page">
 
+    <a href="index.html#collection" class="back-link">
+        ← Back to Collection
+    </a>
+
     <h1>Seijaku Studio</h1>
 
     <p>
@@ -238,3 +254,4 @@ form.addEventListener('submit', async function(event) {
 </body>
 
 </html>
+```
