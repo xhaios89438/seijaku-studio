@@ -57,20 +57,13 @@ const projects = {
 
         hero:
         "images/chair-b/hero.webp",
-
-        media:[
-
-            {
-                type:"image",
-                src:"images/chair-b/detail-01.webp"
-            },
-
-            {
-                type:"image",
-                src:"images/chair-b/detail-02.webp"
-            }
-
-        ]
+        
+media:[
+    {
+        type:"image",
+        src:"images/chair-b/detail-01.webp"
+    }
+]
 
     },
 
