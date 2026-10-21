@@ -10,6 +10,83 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+.about-page {
+    max-width: 700px;
+    margin: 180px auto 100px;
+    padding: 0 30px;
+}
+
+.about-page h1 {
+    font-family: 'ISOCP', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.about-page p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    background: transparent;
+    font: inherit;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom-color: black;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 12px 24px;
+    border: 1px solid black;
+    background: white;
+    color: black;
+    font: inherit;
+    cursor: pointer;
+    transition: background .25s ease, color .25s ease;
+}
+
+.contact-form button:hover {
+    background: black;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .about-page {
+        margin-top: 140px;
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -33,6 +110,51 @@
     <p>
         Seijaku Studio is a design-led furniture maker based in Lincolnshire.
     </p>
+
+    <h2 style="font-weight: normal; margin-bottom: 30px;">
+        Get in touch
+    </h2>
+
+    <form
+        class="contact-form"
+        action="https://formspree.io/f/mzednybb"
+        method="POST"
+    >
+
+        <div>
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
+        </div>
+
+        <button type="submit">Send message →</button>
+
+    </form>
 
 </main>
 
