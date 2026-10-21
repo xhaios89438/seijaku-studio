@@ -5,7 +5,7 @@ const projects = {
         title: "Modular A",
 
         description:
-        "Modular A is a shelving system easily incorporated into any living space, which can adapt to changing environments or user needs. <br><br> The modular pieces can be re-arranged to form shelf units, bedside tables, coffee tables or in any way needed to fit the space.",
+        "Modular A is a shelving system easily incorporated into any living space, which can adapt to changing environments or user needs. <br><br> The modular pieces can be re-arranged to form shelves, bedside tables, coffee tables or in any way needed to fit the space.",
 
         material:
         "Re-engineered Oak worktop / Neodymium magnets",
