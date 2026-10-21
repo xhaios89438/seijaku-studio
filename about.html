@@ -80,9 +80,14 @@
     transition: background .25s ease, color .25s ease;
 }
 
-.contact-form button:hover {
+.contact-form button:hover:not(:disabled) {
     background: black;
     color: white;
+}
+
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: wait;
 }
 
 .form-status {
@@ -93,6 +98,10 @@
 
 .form-status:empty {
     display: none;
+}
+
+.form-status.error {
+    color: #a33;
 }
 
 @media (max-width: 600px) {
@@ -183,13 +192,15 @@
 
 <script>
 const form = document.getElementById('contact-form');
-const status = document.getElementById('form-status');
+const statusMessage = document.getElementById('form-status');
 const submitButton = document.getElementById('submit-button');
 
 form.addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    status.textContent = '';
+    statusMessage.textContent = '';
+    statusMessage.classList.remove('error');
+
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
 
@@ -204,12 +215,19 @@ form.addEventListener('submit', async function(event) {
 
         if (response.ok) {
             form.reset();
-            status.textContent = 'Thank you. Your message has been sent.';
+            statusMessage.textContent =
+                'Thank you. Your message has been sent.';
         } else {
-            status.textContent = 'Sorry, your message could not be sent. Please try again.';
+            statusMessage.textContent =
+                'Sorry, your message could not be sent. Please try again.';
+            statusMessage.classList.add('error');
         }
+
     } catch (error) {
-        status.textContent = 'Unable to send your message. Please check your connection and try again.';
+        statusMessage.textContent =
+            'Unable to send your message. Please check your connection and try again.';
+        statusMessage.classList.add('error');
+
     } finally {
         submitButton.disabled = false;
         submitButton.textContent = 'Send message →';
